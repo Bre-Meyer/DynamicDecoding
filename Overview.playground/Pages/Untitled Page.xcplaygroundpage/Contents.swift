@@ -3,7 +3,6 @@ import Foundation
 // MARK: - Constants
 private enum Example1 {
     static let fileName: String = "sampleJSON1"
-    static let fileExtension: String = "json"
 }
 
 do {

@@ -1,42 +1,29 @@
 import Foundation
 
-// MARK: - DynamicDecodingPath
-typealias DynamicDecodingPath = KeyPath<DynamicDecodingContainer, DynamicDecodingContainer>
-
-// MARK: - Decoding Extensions
-extension JSONDecoder {
-    func decode<T: Decodable>(_ type: T.Type, from data: Data, path: DynamicDecodingPath) throws -> T {
-        try decode(DynamicDecodingContainer.self, from: data).decode(type, path: path)
-    }
-}
-
-extension UnkeyedDecodingContainer {
-    mutating func decode<T: Decodable>(_ type: T.Type, path: DynamicDecodingPath) throws -> T {
-        try DynamicDecodingContainer(from: self).decode(type, path: path)
-    }
-}
-
-extension KeyedDecodingContainer {
-    func decode<T: Decodable>(_ type: T.Type, path: DynamicDecodingPath) throws -> T {
-        try DynamicDecodingContainer(from: self).decode(type, path: path)
-    }
-}
+public typealias DynamicDecodingPath = KeyPath<DynamicDecodingContainer, DynamicDecodingContainer>
 
 // MARK: - DynamicDecodingContainer
 @dynamicMemberLookup
-enum DynamicDecodingContainer: Decodable {
+public enum DynamicDecodingContainer: Decodable {
     case error(Error)
     case root(decoder: Decoder)
     case keyed(container: KeyedDecodingContainer<DynamicCodingKey>, key: String)
     case unkeyed(container: UnkeyedDecodingContainer, index: Int)
 
-    init(from decoder: Decoder) throws {
+    public init(from decoder: Decoder) throws {
         self = .root(decoder: decoder)
     }
 
     init<T>(from keyedContainer: KeyedDecodingContainer<T>) throws {
         guard let key = keyedContainer.codingPath.last?.stringValue
-        else { throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: keyedContainer.codingPath, debugDescription: "Cannot decode from KeyedDecodingContainer without a key")) }
+        else {
+            throw DecodingError.dataCorrupted(
+                DecodingError.Context(
+                    codingPath: keyedContainer.codingPath,
+                    debugDescription: "Cannot decode from KeyedDecodingContainer without a key"
+                )
+            )
+        }
         let container = try keyedContainer.superDecoder().container(keyedBy: DynamicCodingKey.self)
         self = .keyed(container: container, key: key)
     }
@@ -128,11 +115,11 @@ extension DynamicDecodingContainer {
 
 // MARK: Dynamic Coding Key
 extension DynamicDecodingContainer {
-    struct DynamicCodingKey: CodingKey {
-        var intValue: Int?
-        var stringValue: String
-        init?(intValue: Int) { return nil }
-        init(stringValue: String) { self.stringValue = stringValue }
+    public struct DynamicCodingKey: CodingKey {
+        public var intValue: Int?
+        public var stringValue: String
+        public init?(intValue: Int) { return nil }
+        public init(stringValue: String) { self.stringValue = stringValue }
 
         static func key(_ key: String) -> DynamicCodingKey {
             DynamicCodingKey(stringValue: key)
