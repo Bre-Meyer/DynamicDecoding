@@ -186,9 +186,6 @@
 			mainGroup = CCFF746D2E3D9161003A6EE9;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				CCFF74A02E3D928C003A6EE9 /* XCLocalSwiftPackageReference "../../Packages/CoreUtilities" */,
-				CCFF74A12E3D9298003A6EE9 /* XCLocalSwiftPackageReference "../../Packages/CoreTKServices" */,
-				CCFF74A22E3D92C6003A6EE9 /* XCLocalSwiftPackageReference "../../Packages/CoreTypewriter" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CCFF74772E3D9161003A6EE9 /* Products */;
@@ -546,21 +543,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCLocalSwiftPackageReference section */
-		CCFF74A02E3D928C003A6EE9 /* XCLocalSwiftPackageReference "../../Packages/CoreUtilities" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../Packages/CoreUtilities;
-		};
-		CCFF74A12E3D9298003A6EE9 /* XCLocalSwiftPackageReference "../../Packages/CoreTKServices" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../Packages/CoreTKServices;
-		};
-		CCFF74A22E3D92C6003A6EE9 /* XCLocalSwiftPackageReference "../../Packages/CoreTypewriter" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../Packages/CoreTypewriter;
-		};
-/* End XCLocalSwiftPackageReference section */
 	};
 	rootObject = CCFF746E2E3D9161003A6EE9 /* Project object */;
 }
