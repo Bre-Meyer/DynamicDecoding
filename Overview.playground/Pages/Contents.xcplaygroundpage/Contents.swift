@@ -76,9 +76,11 @@ do {
  Same path, but decode into our `Designer` type directly.
  */
 do {
-    let designer: Designer = try JSONDecoder().decode(Designer.self,
-                                                      from: Sample.data,
-                                                      path: \.xo_metadata.entities.0.terms.designer)
+    let designer: Designer = try JSONDecoder().decode(
+        Designer.self,
+        from: Sample.data,
+        path: \.xo_metadata.entities.0.terms.designer
+    )
     print("Designer object → id:", designer.id, "| name:", designer.name)
 } catch {
     print("Example 2 error:", error)
