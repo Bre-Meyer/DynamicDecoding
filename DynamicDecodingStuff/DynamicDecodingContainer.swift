@@ -1,7 +1,9 @@
 import Foundation
 
+// MARK: - DynamicDecodingPath
 typealias DynamicDecodingPath = KeyPath<DynamicDecodingContainer, DynamicDecodingContainer>
 
+// MARK: - Decoding Extensions
 extension JSONDecoder {
     func decode<T: Decodable>(_ type: T.Type, from data: Data, path: DynamicDecodingPath) throws -> T {
         try decode(DynamicDecodingContainer.self, from: data).decode(type, path: path)
@@ -20,6 +22,7 @@ extension KeyedDecodingContainer {
     }
 }
 
+// MARK: - DynamicDecodingContainer
 @dynamicMemberLookup
 enum DynamicDecodingContainer: Decodable {
     case error(Error)
@@ -74,7 +77,7 @@ enum DynamicDecodingContainer: Decodable {
     }
 }
 
-// MARK: - Private Methods
+// MARK: Private Methods
 extension DynamicDecodingContainer {
     private func nestedContainer(withPath path: String) -> DynamicDecodingContainer {
         do {
@@ -123,7 +126,7 @@ extension DynamicDecodingContainer {
     }
 }
 
-// MARK: - Dynamic Coding Key
+// MARK: Dynamic Coding Key
 extension DynamicDecodingContainer {
     struct DynamicCodingKey: CodingKey {
         var intValue: Int?
