@@ -4,7 +4,19 @@ typealias DynamicDecodingPath = KeyPath<DynamicDecodingContainer, DynamicDecodin
 
 extension JSONDecoder {
     func decode<T: Decodable>(_ type: T.Type, from data: Data, path: DynamicDecodingPath) throws -> T {
-        try decode(DynamicDecodingContainer.self, from: data)[keyPath: path].decode(type)
+        try decode(DynamicDecodingContainer.self, from: data).decode(type, path: path)
+    }
+}
+
+extension UnkeyedDecodingContainer {
+    mutating func decode<T: Decodable>(_ type: T.Type, path: DynamicDecodingPath) throws -> T {
+        try DynamicDecodingContainer(from: self).decode(type, path: path)
+    }
+}
+
+extension KeyedDecodingContainer {
+    func decode<T: Decodable>(_ type: T.Type, path: DynamicDecodingPath) throws -> T {
+        try DynamicDecodingContainer(from: self).decode(type, path: path)
     }
 }
 
@@ -17,6 +29,19 @@ enum DynamicDecodingContainer: Decodable {
 
     init(from decoder: Decoder) throws {
         self = .root(decoder: decoder)
+    }
+
+    init<T>(from keyedContainer: KeyedDecodingContainer<T>) throws {
+        guard let key = keyedContainer.codingPath.last?.stringValue
+        else { throw DecodingError.dataCorrupted(DecodingError.Context(codingPath: keyedContainer.codingPath, debugDescription: "Cannot decode from KeyedDecodingContainer without a key")) }
+        let container = try keyedContainer.superDecoder().container(keyedBy: DynamicCodingKey.self)
+        self = .keyed(container: container, key: key)
+    }
+
+    init(from unkeyedContainer: UnkeyedDecodingContainer) throws {
+        var unkeyedContainer = unkeyedContainer
+        let container = try unkeyedContainer.superDecoder().unkeyedContainer()
+        self = .unkeyed(container: container, index: unkeyedContainer.currentIndex)
     }
 
     subscript (dynamicMember path: String) -> DynamicDecodingContainer {
@@ -42,6 +67,10 @@ enum DynamicDecodingContainer: Decodable {
             try goToIndex(index, in: &container)
             return try container.decode(T.self)
         }
+    }
+
+    public func decode<T: Decodable>(_ type: T.Type, path: DynamicDecodingPath) throws -> T {
+        try self[keyPath: path].decode(T.self)
     }
 }
 
