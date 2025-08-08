@@ -6,10 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		CCACDABC2E4688C30012956C /* DynamicDecoding.docc in Sources */ = {isa = PBXBuildFile; fileRef = CCACDABB2E4688C30012956C /* DynamicDecoding.docc */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		CCFF74842E3D9162003A6EE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -28,26 +24,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CCACDABB2E4688C30012956C /* DynamicDecoding.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DynamicDecoding.docc; sourceTree = "<group>"; };
-		CCFF74762E3D9161003A6EE9 /* DynamicDecodingStuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicDecodingStuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCFF74832E3D9162003A6EE9 /* DynamicDecodingStuffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicDecodingStuffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CCFF748D2E3D9162003A6EE9 /* DynamicDecodingStuffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicDecodingStuffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCACDAAD2E467BA40012956C /* Overview.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Overview.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		CCFF74762E3D9161003A6EE9 /* DynamicDecodingUtitlity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicDecodingUtitlity.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCFF74832E3D9162003A6EE9 /* DynamicDecodingUtitlityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicDecodingUtitlityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCFF748D2E3D9162003A6EE9 /* DynamicDecodingUtitlityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicDecodingUtitlityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CCFF74782E3D9161003A6EE9 /* DynamicDecodingStuff */ = {
+		CCFF74782E3D9161003A6EE9 /* DynamicDecodingUtiltity */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DynamicDecodingStuff;
-			sourceTree = "<group>";
-		};
-		CCFF74862E3D9162003A6EE9 /* DynamicDecodingStuffTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DynamicDecodingStuffTests;
-			sourceTree = "<group>";
-		};
-		CCFF74902E3D9162003A6EE9 /* DynamicDecodingStuffUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = DynamicDecodingStuffUITests;
+			path = DynamicDecodingUtiltity;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -80,10 +66,8 @@
 		CCFF746D2E3D9161003A6EE9 = {
 			isa = PBXGroup;
 			children = (
-				CCACDABB2E4688C30012956C /* DynamicDecoding.docc */,
-				CCFF74782E3D9161003A6EE9 /* DynamicDecodingStuff */,
-				CCFF74862E3D9162003A6EE9 /* DynamicDecodingStuffTests */,
-				CCFF74902E3D9162003A6EE9 /* DynamicDecodingStuffUITests */,
+				CCACDAAD2E467BA40012956C /* Overview.playground */,
+				CCFF74782E3D9161003A6EE9 /* DynamicDecodingUtiltity */,
 				CCFF74772E3D9161003A6EE9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,9 +75,9 @@
 		CCFF74772E3D9161003A6EE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CCFF74762E3D9161003A6EE9 /* DynamicDecodingStuff.app */,
-				CCFF74832E3D9162003A6EE9 /* DynamicDecodingStuffTests.xctest */,
-				CCFF748D2E3D9162003A6EE9 /* DynamicDecodingStuffUITests.xctest */,
+				CCFF74762E3D9161003A6EE9 /* DynamicDecodingUtitlity.app */,
+				CCFF74832E3D9162003A6EE9 /* DynamicDecodingUtitlityTests.xctest */,
+				CCFF748D2E3D9162003A6EE9 /* DynamicDecodingUtitlityUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,9 +85,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CCFF74752E3D9161003A6EE9 /* DynamicDecodingStuff */ = {
+		CCFF74752E3D9161003A6EE9 /* DynamicDecodingUtitlity */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCFF74972E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingStuff" */;
+			buildConfigurationList = CCFF74972E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingUtitlity" */;
 			buildPhases = (
 				CCFF74722E3D9161003A6EE9 /* Sources */,
 				CCFF74732E3D9161003A6EE9 /* Frameworks */,
@@ -114,18 +98,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CCFF74782E3D9161003A6EE9 /* DynamicDecodingStuff */,
+				CCFF74782E3D9161003A6EE9 /* DynamicDecodingUtiltity */,
 			);
-			name = DynamicDecodingStuff;
+			name = DynamicDecodingUtitlity;
 			packageProductDependencies = (
 			);
 			productName = DynamicDecodingStuff;
-			productReference = CCFF74762E3D9161003A6EE9 /* DynamicDecodingStuff.app */;
+			productReference = CCFF74762E3D9161003A6EE9 /* DynamicDecodingUtitlity.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CCFF74822E3D9162003A6EE9 /* DynamicDecodingStuffTests */ = {
+		CCFF74822E3D9162003A6EE9 /* DynamicDecodingUtitlityTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCFF749A2E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingStuffTests" */;
+			buildConfigurationList = CCFF749A2E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingUtitlityTests" */;
 			buildPhases = (
 				CCFF747F2E3D9162003A6EE9 /* Sources */,
 				CCFF74802E3D9162003A6EE9 /* Frameworks */,
@@ -136,19 +120,16 @@
 			dependencies = (
 				CCFF74852E3D9162003A6EE9 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				CCFF74862E3D9162003A6EE9 /* DynamicDecodingStuffTests */,
-			);
-			name = DynamicDecodingStuffTests;
+			name = DynamicDecodingUtitlityTests;
 			packageProductDependencies = (
 			);
 			productName = DynamicDecodingStuffTests;
-			productReference = CCFF74832E3D9162003A6EE9 /* DynamicDecodingStuffTests.xctest */;
+			productReference = CCFF74832E3D9162003A6EE9 /* DynamicDecodingUtitlityTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		CCFF748C2E3D9162003A6EE9 /* DynamicDecodingStuffUITests */ = {
+		CCFF748C2E3D9162003A6EE9 /* DynamicDecodingUtitlityUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CCFF749D2E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingStuffUITests" */;
+			buildConfigurationList = CCFF749D2E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingUtitlityUITests" */;
 			buildPhases = (
 				CCFF74892E3D9162003A6EE9 /* Sources */,
 				CCFF748A2E3D9162003A6EE9 /* Frameworks */,
@@ -159,14 +140,11 @@
 			dependencies = (
 				CCFF748F2E3D9162003A6EE9 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				CCFF74902E3D9162003A6EE9 /* DynamicDecodingStuffUITests */,
-			);
-			name = DynamicDecodingStuffUITests;
+			name = DynamicDecodingUtitlityUITests;
 			packageProductDependencies = (
 			);
 			productName = DynamicDecodingStuffUITests;
-			productReference = CCFF748D2E3D9162003A6EE9 /* DynamicDecodingStuffUITests.xctest */;
+			productReference = CCFF748D2E3D9162003A6EE9 /* DynamicDecodingUtitlityUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +170,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CCFF74712E3D9161003A6EE9 /* Build configuration list for PBXProject "DynamicDecodingStuff" */;
+			buildConfigurationList = CCFF74712E3D9161003A6EE9 /* Build configuration list for PBXProject "DynamicDecodingUtitlity" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -211,9 +189,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CCFF74752E3D9161003A6EE9 /* DynamicDecodingStuff */,
-				CCFF74822E3D9162003A6EE9 /* DynamicDecodingStuffTests */,
-				CCFF748C2E3D9162003A6EE9 /* DynamicDecodingStuffUITests */,
+				CCFF74752E3D9161003A6EE9 /* DynamicDecodingUtitlity */,
+				CCFF74822E3D9162003A6EE9 /* DynamicDecodingUtitlityTests */,
+				CCFF748C2E3D9162003A6EE9 /* DynamicDecodingUtitlityUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -247,7 +225,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCACDABC2E4688C30012956C /* DynamicDecoding.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,12 +247,12 @@
 /* Begin PBXTargetDependency section */
 		CCFF74852E3D9162003A6EE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CCFF74752E3D9161003A6EE9 /* DynamicDecodingStuff */;
+			target = CCFF74752E3D9161003A6EE9 /* DynamicDecodingUtitlity */;
 			targetProxy = CCFF74842E3D9162003A6EE9 /* PBXContainerItemProxy */;
 		};
 		CCFF748F2E3D9162003A6EE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CCFF74752E3D9161003A6EE9 /* DynamicDecodingStuff */;
+			target = CCFF74752E3D9161003A6EE9 /* DynamicDecodingUtitlity */;
 			targetProxy = CCFF748E2E3D9162003A6EE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -468,7 +445,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicDecodingStuff.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DynamicDecodingStuff";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicDecodingUtitlity.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DynamicDecodingUtitlity";
 			};
 			name = Debug;
 		};
@@ -486,7 +463,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicDecodingStuff.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DynamicDecodingStuff";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicDecodingUtitlity.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DynamicDecodingUtitlity";
 			};
 			name = Release;
 		};
@@ -525,7 +502,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CCFF74712E3D9161003A6EE9 /* Build configuration list for PBXProject "DynamicDecodingStuff" */ = {
+		CCFF74712E3D9161003A6EE9 /* Build configuration list for PBXProject "DynamicDecodingUtitlity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCFF74952E3D9162003A6EE9 /* Debug */,
@@ -534,7 +511,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCFF74972E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingStuff" */ = {
+		CCFF74972E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingUtitlity" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCFF74982E3D9162003A6EE9 /* Debug */,
@@ -543,7 +520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCFF749A2E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingStuffTests" */ = {
+		CCFF749A2E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingUtitlityTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCFF749B2E3D9162003A6EE9 /* Debug */,
@@ -552,7 +529,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CCFF749D2E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingStuffUITests" */ = {
+		CCFF749D2E3D9162003A6EE9 /* Build configuration list for PBXNativeTarget "DynamicDecodingUtitlityUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CCFF749E2E3D9162003A6EE9 /* Debug */,
