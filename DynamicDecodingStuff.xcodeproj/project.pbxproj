@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CCACDABC2E4688C30012956C /* DynamicDecoding.docc in Sources */ = {isa = PBXBuildFile; fileRef = CCACDABB2E4688C30012956C /* DynamicDecoding.docc */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		CCFF74842E3D9162003A6EE9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -24,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CCACDABB2E4688C30012956C /* DynamicDecoding.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = DynamicDecoding.docc; sourceTree = "<group>"; };
 		CCFF74762E3D9161003A6EE9 /* DynamicDecodingStuff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicDecodingStuff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFF74832E3D9162003A6EE9 /* DynamicDecodingStuffTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicDecodingStuffTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFF748D2E3D9162003A6EE9 /* DynamicDecodingStuffUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicDecodingStuffUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		CCFF746D2E3D9161003A6EE9 = {
 			isa = PBXGroup;
 			children = (
+				CCACDABB2E4688C30012956C /* DynamicDecoding.docc */,
 				CCFF74782E3D9161003A6EE9 /* DynamicDecodingStuff */,
 				CCFF74862E3D9162003A6EE9 /* DynamicDecodingStuffTests */,
 				CCFF74902E3D9162003A6EE9 /* DynamicDecodingStuffUITests */,
@@ -241,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCACDABC2E4688C30012956C /* DynamicDecoding.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
