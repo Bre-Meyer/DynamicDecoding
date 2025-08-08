@@ -7,7 +7,7 @@
 		<key>Overview (Playground) 1.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>4</integer>
+			<integer>1</integer>
 		</dict>
 		<key>Overview (Playground) 10.xcscheme</key>
 		<dict>
@@ -22,12 +22,12 @@
 		<key>Overview (Playground) 2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>5</integer>
+			<integer>2</integer>
 		</dict>
 		<key>Overview (Playground) 3.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>3</integer>
 		</dict>
 		<key>Overview (Playground) 4.xcscheme</key>
 		<dict>
@@ -62,7 +62,7 @@
 		<key>Overview (Playground).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>0</integer>
 		</dict>
 	</dict>
 </dict>
