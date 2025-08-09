@@ -89,7 +89,7 @@ public enum DynamicDecodingContainer: Decodable {
             )
         case let .keyed(container, key):
             return try container.decode(T.self, forKey: .key(key))
-        case var .unkeyed(container, index):
+        case .unkeyed(var container, let index):
             try goToIndex(index, in: &container)
             return try container.decode(T.self)
         }
@@ -118,7 +118,7 @@ extension DynamicDecodingContainer {
             case let .keyed(container, key):
                 let nestedContainer = try container.nestedContainer(keyedBy: DynamicCodingKey.self, forKey: .key(key))
                 return .keyed(container: nestedContainer, key: path)
-            case var .unkeyed(container, index):
+            case .unkeyed(var container, let index):
                 try goToIndex(index, in: &container)
                 let nestedContainer = try container.nestedContainer(keyedBy: DynamicCodingKey.self)
                 return .keyed(container: nestedContainer, key: path)
@@ -139,7 +139,7 @@ extension DynamicDecodingContainer {
             case let .keyed(container, key):
                 let nestedContainer = try container.nestedUnkeyedContainer(forKey: .key(key))
                 return .unkeyed(container: nestedContainer, index: path)
-            case var .unkeyed(container, index):
+            case .unkeyed(var container, let index):
                 try goToIndex(index, in: &container)
                 let nestedContainer = try container.nestedUnkeyedContainer()
                 return .unkeyed(container: nestedContainer, index: path)
