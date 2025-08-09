@@ -125,3 +125,20 @@ do {
 } catch {
     print("Example 4 (expected failure):", error)
 }
+/*:
+ ---
+
+ ## Example 5 — DIY
+
+ Test out your own paths or json data
+ */
+do {
+    let value = try JSONDecoder().decode(
+        String.self,
+        from: data,
+        path: \.some.path.here
+    )
+    print("Label:", value)
+} catch {
+    print("Example 5 error:", error)
+}
