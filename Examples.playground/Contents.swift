@@ -36,10 +36,13 @@
  ---
 
  ### Models and Helpers
- // I want to say something here about how example models and helper functions can be found in the `sources` folder
+ The `Designer` model type and `getData` helper function used in these examples
+ are located in the `Sources` folder of the playground.
 
  ### Setup
- // something about getting our sample json data, and where the sample json can be viewed
+ Here we load a sample JSON payload from the playground’s `Resources` folder.
+ You can open `sampleJSON1.json` in the navigator to inspect its structure.
+ The examples below will reference this data when demonstrating path-based decoding.
  */
 import Foundation
 
