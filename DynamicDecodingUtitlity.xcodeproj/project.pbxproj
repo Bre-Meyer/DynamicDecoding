@@ -71,8 +71,8 @@
 		CCFF746D2E3D9161003A6EE9 = {
 			isa = PBXGroup;
 			children = (
-				CCF01B062E46C66400A5AD17 /* Examples.playground */,
 				CCACDABD2E46926C0012956C /* README.md */,
+				CCF01B062E46C66400A5AD17 /* Examples.playground */,
 				CCFF74782E3D9161003A6EE9 /* DynamicDecodingUtiltity */,
 				CCFF74772E3D9161003A6EE9 /* Products */,
 			);
