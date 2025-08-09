@@ -4,7 +4,7 @@
  This page is an interactive **explanation + demo** of a small decoding utility that makes it easy to extract values buried deep inside gnarly JSON responses — without writing 20 layers of `structs` or a forest of `CodingKeys`.
 
  ```swift
- JSONDecoder().decode(T.self, from: data, path: \.some.nested.0.path.here)
+ JSONDecoder().decode(T.self, from: data, path: \.some.nested.path.here)
  ```
 
  Where `path` is a **Swift KeyPath** into `DynamicDecodingContainer`. Arrays are addressed by an **integer segment** in the key path (e.g., `.0` for the first element).
