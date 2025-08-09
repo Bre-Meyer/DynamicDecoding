@@ -1,10 +1,7 @@
-import Foundation
 /*:
  # Dynamic Decoding for Deeply‑Nested JSON
 
- This page is an **interactive explanation + demo** of a tiny utility that lets you decode values **deep inside** messy JSON *without* defining the full model tree.
-
- **Public API teammates should use:**
+ This page is an interactive **explanation + demo** of a small decoding utility that makes it easy to extract values buried deep inside gnarly JSON responses — without writing 20 layers of `structs` or a forest of `CodingKeys`.
 
  ```swift
  JSONDecoder().decode(T.self, from: data, path: \.some.nested.0.path.here)
@@ -14,7 +11,7 @@ import Foundation
 
  ---
 
- ## Why?
+ ### Why?
 
  - Big payload? Only need a couple fields? This keeps things **readable** and **fast** to write.
  - Avoids maintaining massive `CodingKeys` hierarchies for throwaway reads.
@@ -22,7 +19,7 @@ import Foundation
 
  ---
 
- ## How paths work
+ ### How paths work
 
  You build the path with regular **Swift key‑path syntax** into `DynamicDecodingContainer`:
 
@@ -38,13 +35,14 @@ import Foundation
 
  ---
 
- ## Models and Helpers
+ ### Models and Helpers
  // I want to say something here about how example models and helper functions can be found in the `sources` folder
 
- ## Setup
+ ### Setup
  // something about getting our sample json data, and where the sample json can be viewed
-
  */
+import Foundation
+
 var data: Data
 do {
     data = try getData(from: .jsonResource("sampleJSON1"))
@@ -52,9 +50,9 @@ do {
     print(error)
     fatalError("Couldn't load sample JSON data.")
 }
-
 /*:
  ---
+
  ## Example 1 — Grab a deeply‑nested **String**
 
  Decode the **description** of the social sharing data from a deep path without building intermediate models.
@@ -69,10 +67,9 @@ do {
 } catch {
     print("Example 1 error:", error)
 }
-
-
 /*:
  ---
+
  ## Example 2 — Arrays and indices
 
  Paths support array segments. For instance, here we pull the **name** of the designer in the first entity.
@@ -87,9 +84,9 @@ do {
 } catch {
     print("Example 2 error:", error)
 }
-
 /*:
  ---
+
  ## Example 3 — Decode a **model** from a sub‑tree
 
  Same path, but decode into our `Designer` type directly.
@@ -104,9 +101,9 @@ do {
 } catch {
     print("Example 3 error:", error)
 }
-
 /*:
  ---
+
  ## Example 4 — Errors are propogated just like regular decoding
 
  Give the decoder a **wrong path** to see how it fails. You should get a message that points to the failing segment.
