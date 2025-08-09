@@ -11,6 +11,10 @@
 
  ---
 
+ > Switch to **Editor → Show Rendered Markup** view formatted explanations alongside the code snippets.
+ > You can run the code snippets in the playground and view the output in the console or Live View side bar.
+ > You can modify the examples or add your own to see how different paths behave.
+
  ### Why?
 
  - Big payload? Only need a couple fields? This keeps things **readable** and **fast** to write.
