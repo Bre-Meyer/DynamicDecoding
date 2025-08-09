@@ -28,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CCACDAAD2E467BA40012956C /* Examples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Examples.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCACDABD2E46926C0012956C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CCF01B062E46C66400A5AD17 /* Examples.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Examples.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		CCFF74762E3D9161003A6EE9 /* DynamicDecodingUtitlity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DynamicDecodingUtitlity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFF74832E3D9162003A6EE9 /* DynamicDecodingUtitlityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicDecodingUtitlityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCFF748D2E3D9162003A6EE9 /* DynamicDecodingUtitlityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DynamicDecodingUtitlityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,8 +71,8 @@
 		CCFF746D2E3D9161003A6EE9 = {
 			isa = PBXGroup;
 			children = (
+				CCF01B062E46C66400A5AD17 /* Examples.playground */,
 				CCACDABD2E46926C0012956C /* README.md */,
-				CCACDAAD2E467BA40012956C /* Examples.playground */,
 				CCFF74782E3D9161003A6EE9 /* DynamicDecodingUtiltity */,
 				CCFF74772E3D9161003A6EE9 /* Products */,
 			);
