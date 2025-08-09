@@ -1,5 +1,6 @@
 import Foundation
 
+// MARK: - DynamicDecodingPath
 /// A `KeyPath` into a `DynamicDecodingContainer` that represents a traversal path
 /// to a nested value in a JSON payload.
 ///
@@ -11,6 +12,7 @@ import Foundation
 /// at index 0, then through keyed containers `terms` and `designer`.
 public typealias DynamicDecodingPath = KeyPath<DynamicDecodingContainer, DynamicDecodingContainer>
 
+// MARK: - DynamicDecodingContainer
 /// A dynamic, navigable decoding container that can traverse JSON hierarchies
 /// without defining intermediate `Decodable` model types.
 ///
