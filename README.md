@@ -10,13 +10,13 @@ Decoding these with standard `Decodable` means defining either **full intermedia
 ### Example JSON
 ````json
 {
-  "xo_metadata": {
-    "entities": [
+  "mission_log": {
+    "entries": [
       {
-        "terms": {
-          "designer": {
-            "id": "123",
-            "name": "Lillian West"
+        "crew": {
+          "commander": {
+            "id": "crew-01",
+            "name": "Cmdr. Ayla Chen"
           }
         }
       }
@@ -25,18 +25,16 @@ Decoding these with standard `Decodable` means defining either **full intermedia
 }
 ````
 
-To decode just "Lillian West" with traditional `Decodable`, you’d need multiple nested types or `CodingKey`s for `xo_metadata`, `entities`, `terms`, and `designer`.
+To decode just `"Cmdr. Ayla Chen"` with traditional `Decodable`, you’d need to define nested types and `CodingKey`s for `mission_log`, `entries`, `crew`, and `commander`.
 
----
-
-This utility extends `JSONDecoder` with a `path` parameter that can directly navigate to deeply nested values using **Swift key paths** - no intermediate types required
+This utility extends `JSONDecoder` with a `path` parameter that lets you jump straight to deeply nested values using **Swift key paths** – no intermediate types required.
 
 ### End Result
 ```swift
 let name: String = try JSONDecoder().decode(
     String.self,
     from: data,
-    path: \.xo_metadata.entities.0.terms.designer.name
+    path: \.mission_log.entries.0.crew.commander.name
 )
 ```
 

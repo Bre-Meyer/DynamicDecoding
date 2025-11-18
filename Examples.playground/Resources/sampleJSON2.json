@@ -1,0 +1,52 @@
+{
+  "params": {
+    "format": "json",
+    "controller": "missions/telemetry",
+    "action": "detail",
+    "mission_id": "aurora-7"
+  },
+  "mission": {
+    "id": "aurora-7",
+    "name": "Aurora-7 Orbital Survey",
+    "status": "in_orbit",
+    "social": {
+      "share_payload": {
+        "title": "Aurora-7 is in orbit",
+        "description": "Aurora-7 is currently performing high-resolution scans... Docking window opens at 03:17 UTC."
+      }
+    }
+  },
+  "mission_log": {
+    "entries": [
+      {
+        "id": "log-001",
+        "timestamp": "2025-02-19T13:05:00Z",
+        "crew": {
+          "commander": {
+            "id": "crew-01",
+            "name": "Cmdr. Ayla Chen",
+            "role": "Mission Commander",
+            "agency": "International Space Alliance",
+            "profileUrl": "https://mission-control.example/crew/ayla-chen"
+          }
+        },
+        "summary": "Aurora-7 reached stable orbit..."
+      },
+      {
+        "id": "log-002",
+        "timestamp": "2025-02-19T14:15:00Z",
+        "crew": {
+          "commander": {
+            "id": "crew-02",
+            "name": "Lt. Marco Ruiz",
+            "role": "Flight Engineer",
+            "agency": "International Space Alliance",
+            "profileUrl": "https://mission-control.example/crew/marco-ruiz"
+          }
+        },
+        "summary": "Thermal imaging sweep completed successfully."
+      }
+    ]
+  }
+}
+

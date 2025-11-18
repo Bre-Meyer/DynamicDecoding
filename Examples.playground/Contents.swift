@@ -52,7 +52,7 @@ import Foundation
 
 var data: Data
 do {
-    data = try getData(from: .jsonResource("sampleJSON1"))
+    data = try getData(from: .jsonResource("sampleJSON2"))
 } catch {
     print(error)
     fatalError("Couldn't load sample JSON data.")
@@ -68,7 +68,7 @@ do {
     let description: String = try JSONDecoder().decode(
         String.self,
         from: data,
-        path: \.social_sharing_data.data_fields.description
+        path: \.mission.social.share_payload.description
     )
     print("Description:", description)
 } catch {
@@ -85,9 +85,9 @@ do {
     let name: String = try JSONDecoder().decode(
         String.self,
         from: data,
-        path: \.xo_metadata.entities.0.terms.designer.name
+        path: \.mission_log.entries.0.crew.commander.name
     )
-    print("Designer name:", name)
+    print("Commander name:", name)
 } catch {
     print("Example 2 error:", error)
 }
@@ -99,12 +99,12 @@ do {
  Same path, but decode into our `Designer` type directly.
  */
 do {
-    let designer: Designer = try JSONDecoder().decode(
-        Designer.self,
+    let commander: Commander = try JSONDecoder().decode(
+        Commander.self,
         from: data,
-        path: \.xo_metadata.entities.0.terms.designer
+        path: \.mission_log.entries.0.crew.commander
     )
-    print("Designer object → id:", designer.id, "| url:", designer.url)
+    print("Commander object → id:", commander.id, "| agency:", commander.agency)
 } catch {
     print("Example 3 error:", error)
 }
