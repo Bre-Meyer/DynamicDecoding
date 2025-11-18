@@ -52,7 +52,7 @@ import Foundation
 
 var data: Data
 do {
-    data = try getData(from: .jsonResource("sampleJSON2"))
+    data = try getData(from: .jsonResource("sampleJSON1"))
 } catch {
     print(error)
     fatalError("Couldn't load sample JSON data.")
