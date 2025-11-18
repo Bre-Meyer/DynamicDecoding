@@ -28,7 +28,7 @@
  You build the path with regular **Swift key‑path syntax** into `DynamicDecodingContainer`:
 
  ```swift
- \.xo_metadata.entities.0.terms.designer.name
+ \.mission_log.entries.0.crew.commander.name
  ```
 
  This means: go to `xo_metadata` → `entities` (array) → element `0` → `terms` → `designer` → `name`.
@@ -62,7 +62,7 @@ do {
 
  ## Example 1 — Grab a deeply‑nested **String**
 
- Decode the **description** of the social sharing data from a deep path without building intermediate models.
+ Decode the **mission status description** from a deep path without building intermediate models.
  */
 do {
     let description: String = try JSONDecoder().decode(
@@ -79,7 +79,7 @@ do {
 
  ## Example 2 — Arrays and indices
 
- Paths support array segments. For instance, here we pull the **name** of the designer in the first entity.
+ Paths support array segments. For instance, here we pull the **name** of the commander in the first mission log entry.
  */
 do {
     let name: String = try JSONDecoder().decode(
@@ -96,7 +96,7 @@ do {
 
  ## Example 3 — Decode a **model** from a sub‑tree
 
- Same path, but decode into our `Designer` type directly.
+ Same path, but decode into our `Commander` type directly.
  */
 do {
     let commander: Commander = try JSONDecoder().decode(
